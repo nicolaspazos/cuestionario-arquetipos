@@ -1,0 +1,200 @@
+Informe del paquete
+
+-----------------------------------------------------------------------------
+Documento:
+Nombre: Test_Arquetipos.ai
+Modo de color: Color RGB
+Perfil de color: sRGB IEC61966-2.1
+Unidades de regla: p’xeles
+Dimensiones de la mesa de trabajo: 1373 px x 8491 px
+Mostrar im‡genes en modo contorno: Desactivado
+Resaltar fuentes sustituidas: Desactivado
+Resaltar glifos sustituidos: Desactivado
+Conservar capacidad de edici—n de texto
+Simular papel de color: Desactivado
+
+-----------------------------------------------------------------------------
+Objetos de tintas planas:
+
+-----------------------------------------------------------------------------
+Fuentes no disponibles:Ninguno
+
+-----------------------------------------------------------------------------
+Fuentes protegidas no empaquetadas:Ninguno
+
+-----------------------------------------------------------------------------
+Fuentes:
+Gotham Medium (OTF)
+Gotham (OTF)
+Gotham-Book (TrueType)
+Gotham-Bold (TrueType)
+Helvetica Light (TrueType)
+Montserrat Light (TrueType)
+Montserrat Regular (TrueType)
+Montserrat Italic (TrueType)
+Montserrat Medium (TrueType)
+Montserrat SemiBold (TrueType)
+Montserrat Bold (TrueType)
+
+-----------------------------------------------------------------------------
+Fuentes incrustadas:
+Ninguno
+
+-----------------------------------------------------------------------------
+Enlaces no disponibles:
+Ninguno
+
+-----------------------------------------------------------------------------
+Im‡genes enlazadas:
+
+/Usuarios/lara/Escritorio/Liderazgo /Links_Arquetipos/FichaLiderazgo
+Tipo: RGB transparente
+Bits por p’xel: 32
+Canales: 4
+Tama–o: 872K, 1321 por 169 p’xeles
+Dimensiones: 1321 por 169 puntos 
+Resoluci—n: 72 por 72 p’xeles por pulgada
+
+
+/Usuarios/lara/Escritorio/Liderazgo /Links_Arquetipos/Test_liderazgo
+Tipo: RGB transparente
+Bits por p’xel: 32
+Canales: 4
+Tama–o: 1410K, 1368 por 264 p’xeles
+Dimensiones: 1373 por 264 puntos 
+Resoluci—n: 71,738 por 72 p’xeles por pulgada
+
+
+/Usuarios/lara/Escritorio/Liderazgo /Links_Arquetipos/LiderazgoIntegrado
+Tipo: RGB transparente
+Bits por p’xel: 32
+Canales: 4
+Tama–o: 556K, 298 por 478 p’xeles
+Dimensiones: 298 por 478 puntos 
+Resoluci—n: 72 por 72 p’xeles por pulgada
+
+
+/Usuarios/lara/Escritorio/Liderazgo /Links_Arquetipos/Resultados_Liderazgo
+Tipo: RGB transparente
+Bits por p’xel: 32
+Canales: 4
+Tama–o: 399K, 261 por 392 p’xeles
+Dimensiones: 261 por 392 puntos 
+Resoluci—n: 72 por 72 p’xeles por pulgada
+
+
+/Usuarios/lara/Escritorio/Liderazgo /Links_Arquetipos/Resultados_a
+Tipo: RGB transparente
+Bits por p’xel: 32
+Canales: 4
+Tama–o: 83K, 195 por 110 p’xeles
+Dimensiones: 195 por 110 puntos 
+Resoluci—n: 72 por 72 p’xeles por pulgada
+
+
+/Usuarios/lara/Escritorio/Liderazgo /Links_Arquetipos/Resultados_b
+Tipo: RGB transparente
+Bits por p’xel: 32
+Canales: 4
+Tama–o: 104K, 215 por 124 p’xeles
+Dimensiones: 215 por 124 puntos 
+Resoluci—n: 72 por 72 p’xeles por pulgada
+
+
+/Usuarios/lara/Escritorio/Liderazgo /Links_Arquetipos/Icono_LiderazgoIntegrado
+Tipo: RGB transparente
+Bits por p’xel: 32
+Canales: 4
+Tama–o: 15K, 60 por 68 p’xeles
+Dimensiones: 60 por 68 puntos 
+Resoluci—n: 72 por 72 p’xeles por pulgada
+
+
+/Usuarios/lara/Escritorio/Liderazgo /Links_Arquetipos/4Habilidades
+Tipo: RGB transparente
+Bits por p’xel: 32
+Canales: 4
+Tama–o: 813K, 413 por 504 p’xeles
+Dimensiones: 413 por 504 puntos 
+Resoluci—n: 72 por 72 p’xeles por pulgada
+
+
+/Usuarios/lara/Escritorio/Liderazgo /Links_Arquetipos/ElRegente
+Tipo: RGB transparente
+Bits por p’xel: 32
+Canales: 4
+Tama–o: 870K, 437 por 510 p’xeles
+Dimensiones: 437 por 510 puntos 
+Resoluci—n: 72 por 72 p’xeles por pulgada
+
+
+/Usuarios/lara/Escritorio/Liderazgo /Links_Arquetipos/Habilidad_Regente
+Tipo: RGB transparente
+Bits por p’xel: 32
+Canales: 4
+Tama–o: 528K, 475 por 285 p’xeles
+Dimensiones: 475 por 285 puntos 
+Resoluci—n: 72 por 72 p’xeles por pulgada
+
+
+/Usuarios/lara/Escritorio/Liderazgo /Links_Arquetipos/ElCreador
+Tipo: RGB transparente
+Bits por p’xel: 32
+Canales: 4
+Tama–o: 1034K, 532 por 498 p’xeles
+Dimensiones: 532 por 498 puntos 
+Resoluci—n: 72 por 72 p’xeles por pulgada
+
+
+/Usuarios/lara/Escritorio/Liderazgo /Links_Arquetipos/Habilidad_creador
+Tipo: RGB transparente
+Bits por p’xel: 32
+Canales: 4
+Tama–o: 1893K, 1377 por 352 p’xeles
+Dimensiones: 1377 por 352 puntos 
+Resoluci—n: 72 por 72 p’xeles por pulgada
+
+
+/Usuarios/lara/Escritorio/Liderazgo /Links_Arquetipos/ElCuidador
+Tipo: RGB transparente
+Bits por p’xel: 32
+Canales: 4
+Tama–o: 968K, 466 por 532 p’xeles
+Dimensiones: 466 por 532 puntos 
+Resoluci—n: 72 por 72 p’xeles por pulgada
+
+
+/Usuarios/lara/Escritorio/Liderazgo /Links_Arquetipos/Habilidad_Cuidador
+Tipo: RGB transparente
+Bits por p’xel: 32
+Canales: 4
+Tama–o: 1120K, 518 por 554 p’xeles
+Dimensiones: 518 por 554 puntos 
+Resoluci—n: 72 por 72 p’xeles por pulgada
+
+
+/Usuarios/lara/Escritorio/Liderazgo /Links_Arquetipos/ElMago
+Tipo: RGB transparente
+Bits por p’xel: 32
+Canales: 4
+Tama–o: 806K, 405 por 510 p’xeles
+Dimensiones: 405 por 510 puntos 
+Resoluci—n: 72 por 72 p’xeles por pulgada
+
+
+/Usuarios/lara/Escritorio/Liderazgo /Links_Arquetipos/Habilidad_Mago
+Tipo: RGB transparente
+Bits por p’xel: 32
+Canales: 4
+Tama–o: 1180K, 536 por 564 p’xeles
+Dimensiones: 536 por 564 puntos 
+Resoluci—n: 72 por 72 p’xeles por pulgada
+
+
+/Usuarios/lara/Escritorio/Liderazgo /Links_Arquetipos/Boton
+Tipo: RGB transparente
+Bits por p’xel: 32
+Canales: 4
+Tama–o: 295K, 352 por 215 p’xeles
+Dimensiones: 352 por 215 puntos 
+Resoluci—n: 72 por 72 p’xeles por pulgada

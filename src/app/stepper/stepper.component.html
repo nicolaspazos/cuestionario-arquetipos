@@ -1,0 +1,341 @@
+<h1 class="titulo-arriba"> Test de </h1>  
+<h1 class="titulo-abajo">  Liderazgo integrado </h1> 
+
+
+
+<main>
+<mat-horizontal-stepper class="todo" linear>
+  <ng-template matStepperIcon="edit">
+  </ng-template>
+  
+  <ng-template matStepperIcon="form">
+		<mat-icon></mat-icon>
+	</ng-template>
+
+    <mat-step class="step1" state='form'>
+      <mat-grid-list cols='3' rowHeight="5rem"  gutterSize="7px">
+        <mat-radio-group aria-label="Select an option">
+          <mat-grid-tile colspan='3'><p class="pregunta">¿Me permito evaluar si las estrategias que estamos implementando coinciden con el objetivo más profundo que deseamos lograr?	</p></mat-grid-tile>
+          <mat-grid-tile colspan='1'><mat-radio-button value="1" >Casi nunca</mat-radio-button></mat-grid-tile>
+          <mat-grid-tile colspan='1'><mat-radio-button (click)="Reg1()" value="2" >A veces</mat-radio-button></mat-grid-tile>
+          <mat-grid-tile colspan='1'><mat-radio-button (click)="Reg2()" value="3" >Casi siempre</mat-radio-button></mat-grid-tile>
+        </mat-radio-group>
+      
+      
+        <mat-radio-group aria-label="Select an option">
+          <mat-grid-tile colspan='3'><p class="pregunta">Como líder, ¿me ocupo de que cada miembro de mi equipo pueda encontrarse con sus propios dones y desarrollarlos en un proceso evolutivo?			</p></mat-grid-tile>
+          <mat-grid-tile colspan='1'><mat-radio-button value="1" >Casi nunca</mat-radio-button></mat-grid-tile>
+          <mat-grid-tile colspan='1'><mat-radio-button (click)="Mag1()" value="2" >A veces</mat-radio-button></mat-grid-tile>
+          <mat-grid-tile colspan='1'><mat-radio-button (click)="Mag2()" value="3" >Casi siempre</mat-radio-button></mat-grid-tile>
+        </mat-radio-group>
+      
+        <mat-radio-group aria-label="Select an option">
+          <mat-grid-tile colspan='3'><p class="pregunta">¿Dedico tiempo a nutrir y formar a mi equipo, transmitirle conocimientos, tecnologías, miradas específicas?			</p></mat-grid-tile>
+          <mat-grid-tile colspan='1'><mat-radio-button value="1" >Casi nunca</mat-radio-button></mat-grid-tile>
+          <mat-grid-tile colspan='1'><mat-radio-button (click)="Cui1()" value="2">A veces</mat-radio-button></mat-grid-tile>
+          <mat-grid-tile colspan='1'><mat-radio-button (click)="Cui2()" value="3" >Casi siempre</mat-radio-button></mat-grid-tile>
+        </mat-radio-group>
+      
+        <mat-radio-group aria-label="Select an option">
+          <mat-grid-tile colspan='3'><p class="pregunta">¿ Me vienen a la cabeza nuevas ideas, reflexiones, formas de hacer?		</p></mat-grid-tile>
+          <mat-grid-tile colspan='1'><mat-radio-button value="1" >Casi nunca</mat-radio-button></mat-grid-tile>
+          <mat-grid-tile colspan='1'><mat-radio-button (click)="Cre1()" value="2" >A veces</mat-radio-button></mat-grid-tile>
+          <mat-grid-tile colspan='1'><mat-radio-button (click)="Cre2()" value="3" >Casi siempre</mat-radio-button></mat-grid-tile>
+        </mat-radio-group>
+      
+        
+        <mat-radio-group aria-label="Select an option">
+          <mat-grid-tile colspan='3'><p class="pregunta">¿ Puedo delegar, y permitir que otros realicen sus tareas a su mejor entendimiento y respetando su estilo y modalidad?		</p></mat-grid-tile>
+          <mat-grid-tile colspan='1'><mat-radio-button value="1">Casi nunca</mat-radio-button></mat-grid-tile>
+          <mat-grid-tile colspan='1'><mat-radio-button (click)="Reg1()" value="2">A veces</mat-radio-button></mat-grid-tile>
+          <mat-grid-tile colspan='1'><mat-radio-button (click)="Reg2()" value="3">Casi siempre</mat-radio-button></mat-grid-tile>
+        </mat-radio-group>
+      
+        
+        <mat-radio-group aria-label="Select an option">
+          <mat-grid-tile colspan='3'><p class="pregunta"> Cuando el camino se vuelve difícil y mis planes fracasan, ¿sé cómo calmarme, conectar con mi cuerpo, y cambiar mi estado de conciencia, de modo de poder encontrar recursos nuevos?		</p></mat-grid-tile>
+          <mat-grid-tile colspan='1'><mat-radio-button value="1">Casi nunca</mat-radio-button></mat-grid-tile>
+          <mat-grid-tile colspan='1'><mat-radio-button (click)="Mag1()" value="2">A veces</mat-radio-button></mat-grid-tile>
+          <mat-grid-tile colspan='1'><mat-radio-button (click)="Mag2()" value="3">Casi siempre</mat-radio-button></mat-grid-tile>
+        </mat-radio-group>
+
+        <mat-radio-group aria-label="Select an option">
+          <mat-grid-tile colspan='3'><p class="pregunta">¿Me encuentro manipulando inconscientemente a personas o a situaciones, para poder realizar los fines de mi proyecto?			</p></mat-grid-tile>
+          <mat-grid-tile colspan='1'><mat-radio-button value="1"  >Casi nunca</mat-radio-button></mat-grid-tile>
+          <mat-grid-tile colspan='1'><mat-radio-button (click)="Mag1()" (click)="MagSombra1()" value="2">A veces</mat-radio-button></mat-grid-tile>
+          <mat-grid-tile colspan='1'><mat-radio-button (click)="Mag2()" (click)="MagSombra2()" value="3">Casi siempre</mat-radio-button></mat-grid-tile>
+        </mat-radio-group>
+      
+        
+        
+      </mat-grid-list>
+        <div>
+            <button mat-button matStepperNext>  Siguiente</button>
+        </div>
+
+    </mat-step>
+    <mat-step state='form'>
+      <mat-grid-list cols='3' rowHeight="5rem"  gutterSize="7px">
+        <mat-radio-group aria-label="Select an option">
+          <mat-grid-tile colspan='3'><p class="pregunta">¿Siento que mis cuidados hacia mi equipo brotan desde la alegría y la abundancia?	</p></mat-grid-tile>
+          <mat-grid-tile colspan='1'><mat-radio-button value="1">Casi nunca</mat-radio-button></mat-grid-tile>
+          <mat-grid-tile colspan='1'><mat-radio-button (click)="Cui1()" value="2">A veces</mat-radio-button></mat-grid-tile>
+          <mat-grid-tile colspan='1'><mat-radio-button (click)="Cui2()" value="3">Casi siempre</mat-radio-button></mat-grid-tile>
+        </mat-radio-group>
+
+        <mat-radio-group aria-label="Select an option">
+          <mat-grid-tile colspan='3'><p class="pregunta">¿A mí o a otras personas del emprendimiento nos nace reclamar gratitud o reconocimiento?		</p></mat-grid-tile>
+          <mat-grid-tile colspan='1'><mat-radio-button value="1"  >Casi nunca</mat-radio-button></mat-grid-tile>
+          <mat-grid-tile colspan='1'><mat-radio-button (click)="Cui1()" (click)="CuiSombra1()" value="2">A veces</mat-radio-button></mat-grid-tile>
+          <mat-grid-tile colspan='1'><mat-radio-button (click)="Cui2()" (click)="CuiSombra2()" value="3" >Casi siempre</mat-radio-button></mat-grid-tile>
+        </mat-radio-group>
+      
+      
+        <mat-radio-group aria-label="Select an option">
+          <mat-grid-tile colspan='3'><p class="pregunta">¿Tengo claro en qué momentos -en soledad, en una reunión de equipo, en una conversación con un colega, saliendo a correr- surgen mis ideas nuevas o de mejora para el emprendimiento?		</p></mat-grid-tile>
+          <mat-grid-tile colspan='1'><mat-radio-button value="1">Casi nunca</mat-radio-button></mat-grid-tile>
+          <mat-grid-tile colspan='1'><mat-radio-button (click)="Cre1()" value="2">A veces</mat-radio-button></mat-grid-tile>
+          <mat-grid-tile colspan='1'><mat-radio-button (click)="Cre2()" value="3">Casi siempre</mat-radio-button></mat-grid-tile>
+        </mat-radio-group>
+      
+        <mat-radio-group aria-label="Select an option">
+          <mat-grid-tile colspan='3'><p class="pregunta">¿Puedo dar feedback constructivo, aun si esto implica tener una conversación difícil?		</p></mat-grid-tile>
+          <mat-grid-tile colspan='1'><mat-radio-button value="1"  >Casi nunca</mat-radio-button></mat-grid-tile>
+          <mat-grid-tile colspan='1'><mat-radio-button (click)="Reg1()" value="2" >A veces</mat-radio-button></mat-grid-tile>
+          <mat-grid-tile colspan='1'><mat-radio-button (click)="Reg2()" value="3" >Casi siempre</mat-radio-button></mat-grid-tile>
+        </mat-radio-group>
+      
+        <mat-radio-group aria-label="Select an option">
+          <mat-grid-tile colspan='3'><p class="pregunta">¿Tengo alguna práctica espiritual que me ayude a conectar con la fuente, lo infinito, o algo más grande que yo?		</p></mat-grid-tile>
+          <mat-grid-tile colspan='1'><mat-radio-button value="1"    >Casi nunca</mat-radio-button></mat-grid-tile>
+          <mat-grid-tile colspan='1'><mat-radio-button (click)="Mag1()" value="2">A veces</mat-radio-button></mat-grid-tile>
+          <mat-grid-tile colspan='1'><mat-radio-button (click)="Mag2()" value="3">Casi siempre</mat-radio-button></mat-grid-tile>
+        </mat-radio-group>
+      
+        
+        <mat-radio-group aria-label="Select an option">
+          <mat-grid-tile colspan='3'><p class="pregunta">¿Dejo espacio para que los integrantes de mi equipo puedan tomar sus propias decisiones y desplegar así su potencial y el de la organización, aunque eso signifique para mí soltar y tomar riesgos?	</p></mat-grid-tile>
+          <mat-grid-tile colspan='1'><mat-radio-button value="1"  >Casi nunca</mat-radio-button></mat-grid-tile>
+          <mat-grid-tile colspan='1'><mat-radio-button (click)="Cui1()" value="2">A veces</mat-radio-button></mat-grid-tile>
+          <mat-grid-tile colspan='1'><mat-radio-button (click)="Cui2()" value="3" >Casi siempre</mat-radio-button></mat-grid-tile>
+        </mat-radio-group>
+      
+        
+        <mat-radio-group aria-label="Select an option">
+          <mat-grid-tile colspan='3'><p class="pregunta">¿Genero intencionalmente y con frecuencia momentos de equipo para la creatividad y probar nuevas alternativas a procesos?		</p></mat-grid-tile>
+          <mat-grid-tile colspan='1'><mat-radio-button value="1"  >Casi nunca</mat-radio-button></mat-grid-tile>
+          <mat-grid-tile colspan='1'><mat-radio-button (click)="Cre1()" value="2">A veces</mat-radio-button></mat-grid-tile>
+          <mat-grid-tile colspan='1'><mat-radio-button (click)="Cre2()" value="3">Casi siempre</mat-radio-button></mat-grid-tile>
+        </mat-radio-group>
+      
+        
+
+      </mat-grid-list>
+        <div>
+            <button mat-button matStepperPrevious>Atras</button>
+            <button mat-button matStepperNext>Siguiente</button>
+        </div>
+    </mat-step>
+    <mat-step state='form'>
+      <mat-grid-list cols='3' rowHeight="5rem"  gutterSize="7px">
+        <mat-radio-group aria-label="Select an option">
+          <mat-grid-tile colspan='3'><p class="pregunta">Cuando algo sale mal, ¿soy capaz de observar en qué me equivoqué, o en qué necesito cambiar el rumbo, sin esquivar la responsabilidad ni castigarme por demás?		</p></mat-grid-tile>
+          <mat-grid-tile colspan='1'><mat-radio-button value="1"  >Casi nunca</mat-radio-button></mat-grid-tile>
+          <mat-grid-tile colspan='1'><mat-radio-button (click)="Reg1()" value="2" >A veces</mat-radio-button></mat-grid-tile>
+          <mat-grid-tile colspan='1'><mat-radio-button (click)="Reg2()" value="3" >Casi siempre</mat-radio-button></mat-grid-tile>
+        </mat-radio-group>
+      
+      
+        <mat-radio-group aria-label="Select an option">
+          <mat-grid-tile colspan='3'><p class="pregunta">¿Me permito reescribir la historia de mi equipo cada vez que es necesario? 	</p></mat-grid-tile>
+          <mat-grid-tile colspan='1'><mat-radio-button value="1"  >Casi nunca</mat-radio-button></mat-grid-tile>
+          <mat-grid-tile colspan='1'><mat-radio-button (click)="Mag1()" value="2">A veces</mat-radio-button></mat-grid-tile>
+          <mat-grid-tile colspan='1'><mat-radio-button (click)="Mag2()" value="3">Casi siempre</mat-radio-button></mat-grid-tile>
+        </mat-radio-group>
+      
+        <mat-radio-group aria-label="Select an option">
+          <mat-grid-tile colspan='3'><p class="pregunta">¿La ética del cuidado está puesta como una intención clara dentro de mi emprendimiento / organización? ¿Puedo identificar ejemplos concretos de esto?		</p></mat-grid-tile>
+          <mat-grid-tile colspan='1'><mat-radio-button value="1"  >Casi nunca</mat-radio-button></mat-grid-tile>
+          <mat-grid-tile colspan='1'><mat-radio-button (click)="Cui1()" value="2">A veces</mat-radio-button></mat-grid-tile>
+          <mat-grid-tile colspan='1'><mat-radio-button (click)="Cui2()" value="3" >Casi siempre</mat-radio-button></mat-grid-tile>
+        </mat-radio-group>
+      
+        <mat-radio-group aria-label="Select an option">
+          <mat-grid-tile colspan='3'><p class="pregunta">¿Abrazo los “errores” o desvíos como parte inherente del camino creativo?		</p></mat-grid-tile>
+          <mat-grid-tile colspan='1'><mat-radio-button value="1"  >Casi nunca</mat-radio-button></mat-grid-tile>
+          <mat-grid-tile colspan='1'><mat-radio-button (click)="Cre1()" value="2">A veces</mat-radio-button></mat-grid-tile>
+          <mat-grid-tile colspan='1'><mat-radio-button (click)="Cre2()" value="3">Casi siempre</mat-radio-button></mat-grid-tile>
+        </mat-radio-group>
+      
+        
+        <mat-radio-group aria-label="Select an option">
+          <mat-grid-tile colspan='3'><p class="pregunta">¿Tengo disposición a hacerme cargo de los aspectos más arduos (o menos atractivos) de mi emprendimiento, como la contabilidad, las finanzas, el aseguramiento de los sueldos para todo el equipo, la infraestructura, el pago de impuestos, los trámites y la responsabilidad legal?		</p></mat-grid-tile>
+          <mat-grid-tile colspan='1'><mat-radio-button value="1"  >Casi nunca</mat-radio-button></mat-grid-tile>
+          <mat-grid-tile colspan='1'><mat-radio-button (click)="Reg1()" value="2" >A veces</mat-radio-button></mat-grid-tile>
+          <mat-grid-tile colspan='1'><mat-radio-button (click)="Reg2()" value="3" >Casi siempre</mat-radio-button></mat-grid-tile>
+        </mat-radio-group>
+      
+        
+        <mat-radio-group aria-label="Select an option">
+          <mat-grid-tile colspan='3'><p class="pregunta">¿ Frente a situaciones determinadas, aporto soluciones desde una mirada nueva o una mirada que otros no tienen?	</p></mat-grid-tile>
+          <mat-grid-tile colspan='1'><mat-radio-button value="1"  >Casi nunca</mat-radio-button></mat-grid-tile>
+          <mat-grid-tile colspan='1'><mat-radio-button (click)="Mag1()" value="2">A veces</mat-radio-button></mat-grid-tile>
+          <mat-grid-tile colspan='1'><mat-radio-button (click)="Mag2()" value="3">Casi siempre</mat-radio-button></mat-grid-tile>
+        </mat-radio-group>
+      
+        
+
+      </mat-grid-list>
+        <div>
+            <button mat-button matStepperPrevious>Atras</button>
+            <button mat-button matStepperNext>Siguiente</button>
+        </div>
+
+    </mat-step>
+
+    <mat-step state='form'>
+      
+<mat-grid-list cols='3' rowHeight="5rem"  gutterSize="7px">
+  <mat-radio-group aria-label="Select an option">
+    <mat-grid-tile colspan='3'><p class="pregunta">¿Soy un bueno cuidando de mí mismo/a? ¿Puedo tomarme respiros a lo largo del día, y ofrecerme la misma calidad de cuidado que ofrezco a los demás?		</p></mat-grid-tile>
+    <mat-grid-tile colspan='1'><mat-radio-button value="1"  >Casi nunca</mat-radio-button></mat-grid-tile>
+    <mat-grid-tile colspan='1'><mat-radio-button (click)="Cui1()" value="2">A veces</mat-radio-button></mat-grid-tile>
+    <mat-grid-tile colspan='1'><mat-radio-button (click)="Cui2()" value="3" >Casi siempre</mat-radio-button></mat-grid-tile>
+  </mat-radio-group>
+
+
+  <mat-radio-group aria-label="Select an option">
+    <mat-grid-tile colspan='3'><p class="pregunta">¿La innovación es un valor en mi emprendimiento? ¿Está puesta al servicio de la mejora continua?		</p></mat-grid-tile>
+    <mat-grid-tile colspan='1'><mat-radio-button value="1"  >Casi nunca</mat-radio-button></mat-grid-tile>
+    <mat-grid-tile colspan='1'><mat-radio-button (click)="Cre1()" value="2">A veces</mat-radio-button></mat-grid-tile>
+    <mat-grid-tile colspan='1'><mat-radio-button (click)="Cre2()" value="3">Casi siempre</mat-radio-button></mat-grid-tile>
+  </mat-radio-group>
+
+  <mat-radio-group aria-label="Select an option">
+    <mat-grid-tile colspan='3'><p class="pregunta">¿Tengo confianza en que sabré hacer lo necesario como para cumplir con todas las diferentes necesidades del emprendimiento?			</p></mat-grid-tile>
+    <mat-grid-tile colspan='1'><mat-radio-button value="1"  >Casi nunca</mat-radio-button></mat-grid-tile>
+    <mat-grid-tile colspan='1'><mat-radio-button (click)="Reg1()" value="2" >A veces</mat-radio-button></mat-grid-tile>
+    <mat-grid-tile colspan='1'><mat-radio-button (click)="Reg2()" value="3" >Casi siempre</mat-radio-button></mat-grid-tile>
+  </mat-radio-group>
+
+  <mat-radio-group aria-label="Select an option">
+    <mat-grid-tile colspan='3'><p class="pregunta">¿Soy consciente de que, para transformar el mundo (desde lo social o lo ambiental), tengo que primero apuntar a transformarme?		</p></mat-grid-tile>
+    <mat-grid-tile colspan='1'><mat-radio-button value="1"  >Casi nunca</mat-radio-button></mat-grid-tile>
+    <mat-grid-tile colspan='1'><mat-radio-button (click)="Mag1()" value="2">A veces</mat-radio-button></mat-grid-tile>
+    <mat-grid-tile colspan='1'><mat-radio-button (click)="Mag2()" value="3">Casi siempre</mat-radio-button></mat-grid-tile>
+  </mat-radio-group>
+
+  
+  <mat-radio-group aria-label="Select an option">
+    <mat-grid-tile colspan='3'><p class="pregunta">¿Tengo amigos o aliados en quien respaldarme y a quien contarle mis dificultades o pesares?			</p></mat-grid-tile>
+    <mat-grid-tile colspan='1'><mat-radio-button value="1"  >Casi nunca</mat-radio-button></mat-grid-tile>
+    <mat-grid-tile colspan='1'><mat-radio-button (click)="Cui1()" value="2">A veces</mat-radio-button></mat-grid-tile>
+    <mat-grid-tile colspan='1'><mat-radio-button (click)="Cui2()" value="3" >Casi siempre</mat-radio-button></mat-grid-tile>
+  </mat-radio-group>
+
+  
+  <mat-radio-group aria-label="Select an option">
+    <mat-grid-tile colspan='3'><p class="pregunta">¿Considero mi creatividad y la de mi equipo como un proceso de co-creación alineada a la creatividad y movimiento del universo?		</p></mat-grid-tile>
+    <mat-grid-tile colspan='1'><mat-radio-button value="1"  >Casi nunca</mat-radio-button></mat-grid-tile>
+    <mat-grid-tile colspan='1'><mat-radio-button (click)="Cre1()" value="2">A veces</mat-radio-button></mat-grid-tile>
+    <mat-grid-tile colspan='1'><mat-radio-button (click)="Cre2()" value="3">Casi siempre</mat-radio-button></mat-grid-tile>
+  </mat-radio-group>
+
+  <mat-radio-group aria-label="Select an option">
+    <mat-grid-tile colspan='3'><p class="pregunta">¿Me encuentro haciendo un seguimiento detallado y exhaustivo de cada una de las tareas que delego?	</p></mat-grid-tile>
+    <mat-grid-tile colspan='1'><mat-radio-button value="1"  >Casi nunca</mat-radio-button></mat-grid-tile>
+    <mat-grid-tile colspan='1'><mat-radio-button (click)="Reg1()" (click)="RegSombra1()" value="2" >A veces</mat-radio-button></mat-grid-tile>
+    <mat-grid-tile colspan='1'><mat-radio-button (click)="Reg2()" (click)="RegSombra2()" value="3" >Casi siempre</mat-radio-button></mat-grid-tile>
+  </mat-radio-group>
+  
+
+</mat-grid-list>
+      <div>
+          <button mat-button matStepperPrevious>Atras</button>
+          <button mat-button matStepperNext>Siguiente</button>
+      </div>
+
+    </mat-step>
+
+    <mat-step state='form'>
+      
+<mat-grid-list cols='3' rowHeight="5rem"  gutterSize="7px">
+  <mat-radio-group aria-label="Select an option">
+    <mat-grid-tile colspan='3'><p class="pregunta">¿Siento que estoy “salvando” a otras personas con mi emprendimiento? 		</p></mat-grid-tile>
+    <mat-grid-tile colspan='1'><mat-radio-button value="1"  >Casi nunca</mat-radio-button></mat-grid-tile>
+    <mat-grid-tile colspan='1'><mat-radio-button (click)="Cui1()" (click)="CuiSombra1()" value="2">A veces</mat-radio-button></mat-grid-tile>
+    <mat-grid-tile colspan='1'><mat-radio-button (click)="Cui2()" (click)="CuiSombra2()" value="3" >Casi siempre</mat-radio-button></mat-grid-tile>
+  </mat-radio-group>
+
+
+  <mat-radio-group aria-label="Select an option">
+    <mat-grid-tile colspan='3'><p class="pregunta">¿Siento que me estoy en los detalles, y espero hasta que esté todo perfecto antes de avanzar?	</p></mat-grid-tile>
+    <mat-grid-tile colspan='1'><mat-radio-button value="1"  >Casi nunca</mat-radio-button></mat-grid-tile>
+    <mat-grid-tile colspan='1'><mat-radio-button (click)="Cre1()" (click)="CreSombra1()" value="2">A veces</mat-radio-button></mat-grid-tile>
+    <mat-grid-tile colspan='1'><mat-radio-button (click)="Cre2()" (click)="CreSombra2()" value="3">Casi siempre</mat-radio-button></mat-grid-tile>
+  </mat-radio-group>
+
+  <mat-radio-group aria-label="Select an option">
+    <mat-grid-tile colspan='3'><p class="pregunta">¿Me siento incómodo a la hora de ejercer y expresar mi autoridad? </p></mat-grid-tile>
+    <mat-grid-tile colspan='1'><mat-radio-button value="1"  >Casi nunca</mat-radio-button></mat-grid-tile>
+    <mat-grid-tile colspan='1'><mat-radio-button (click)="Reg1()" (click)="RegSombra1()" value="2" >A veces</mat-radio-button></mat-grid-tile>
+    <mat-grid-tile colspan='1'><mat-radio-button (click)="Reg2()" (click)="RegSombra2()" value="3" >Casi siempre</mat-radio-button></mat-grid-tile>
+  </mat-radio-group>
+
+  <mat-radio-group aria-label="Select an option">
+    <mat-grid-tile colspan='3'><p class="pregunta">¿Me encuentro diciéndome a mí mismo "no puedo", "nunca podré"?		</p></mat-grid-tile>
+    <mat-grid-tile colspan='1'><mat-radio-button value="1"  >Casi nunca</mat-radio-button></mat-grid-tile>
+    <mat-grid-tile colspan='1'><mat-radio-button (click)="Mag1()" (click)="MagSombra1()" value="2">A veces</mat-radio-button></mat-grid-tile>
+    <mat-grid-tile colspan='1'><mat-radio-button (click)="Mag2()" (click)="MagSombra2()" value="3">Casi siempre</mat-radio-button></mat-grid-tile>
+  </mat-radio-group>
+
+  
+  
+
+  
+  <mat-radio-group aria-label="Select an option">
+    <mat-grid-tile colspan='3'><p class="pregunta">¿Soy muy bueno para arrancar cosas nuevas pero me cuesta comprometerme con sostener los esfuerzos que empiezo?		</p></mat-grid-tile>
+    <mat-grid-tile colspan='1'><mat-radio-button value="1"  >Casi nunca</mat-radio-button></mat-grid-tile>
+    <mat-grid-tile colspan='1'><mat-radio-button (click)="Cre1()" (click)="CreSombra1()" value="2">A veces</mat-radio-button></mat-grid-tile>
+    <mat-grid-tile colspan='1'><mat-radio-button (click)="Cre2()" (click)="CreSombra2()" value="3">Casi siempre</mat-radio-button></mat-grid-tile>
+  </mat-radio-group>
+
+  <mat-radio-group aria-label="Select an option">
+    <mat-grid-tile colspan='3'><p class="pregunta">¿Soy realista respecto de los límites que presenta el contexto (geográfico, económico, político y de la industria) en el que operamos como equipo?	</p></mat-grid-tile>
+    <mat-grid-tile colspan='1'><mat-radio-button value="1"  >Casi nunca</mat-radio-button></mat-grid-tile>
+    <mat-grid-tile colspan='1'><mat-radio-button (click)="Reg1()" value="2" >A veces</mat-radio-button></mat-grid-tile>
+    <mat-grid-tile colspan='1'><mat-radio-button (click)="Reg2()" value="3" >Casi siempre</mat-radio-button></mat-grid-tile>
+  </mat-radio-group>
+
+  <mat-radio-group aria-label="Select an option">
+    <mat-grid-tile colspan='3'><p class="pregunta">En las distintas etapas de un proyecto, pero sobre todo en su creación ¿fui / soy capaz de ver tramas de interrelaciones "rotas" y a partir de eso generar un círculo virtuoso de solución?	</p></mat-grid-tile>
+    <mat-grid-tile colspan='1'><mat-radio-button value="1"  >Casi nunca</mat-radio-button></mat-grid-tile>
+    <mat-grid-tile colspan='1'><mat-radio-button (click)="Mag1()" value="2">A veces</mat-radio-button></mat-grid-tile>
+    <mat-grid-tile colspan='1'><mat-radio-button (click)="Mag2()" value="3">Casi siempre</mat-radio-button></mat-grid-tile>
+  </mat-radio-group>
+
+  <mat-radio-group aria-label="Select an option">
+    <mat-grid-tile colspan='3'><p class="pregunta">¿Considero que el emprendimiento tiene la intencionalidad clara hacia el crecimiento y desarrollo de las personas (de sus equipos / de personas u organizaciones asociadas al emprendimiento)?		</p></mat-grid-tile>
+    <mat-grid-tile colspan='1'><mat-radio-button value="1"  >Casi nunca</mat-radio-button></mat-grid-tile>
+    <mat-grid-tile colspan='1'><mat-radio-button (click)="Cui1()" value="2">A veces</mat-radio-button></mat-grid-tile>
+    <mat-grid-tile colspan='1'><mat-radio-button (click)="Cui2()" value="3" >Casi siempre</mat-radio-button></mat-grid-tile>
+  </mat-radio-group>
+
+  <mat-radio-group aria-label="Select an option">
+    <mat-grid-tile colspan='3'><p class="pregunta">¿Habilito espacios para el juego, lo lúdico, el descontracturarnos para crear?	</p></mat-grid-tile>
+    <mat-grid-tile colspan='1'><mat-radio-button value="1"  >Casi nunca</mat-radio-button></mat-grid-tile>
+    <mat-grid-tile colspan='1'><mat-radio-button (click)="Cre1()" value="2">A veces</mat-radio-button></mat-grid-tile>
+    <mat-grid-tile colspan='1'><mat-radio-button (click)="Cre2()" value="3">Casi siempre</mat-radio-button></mat-grid-tile>
+  </mat-radio-group>
+  
+
+</mat-grid-list>
+      <div>
+        <button mat-button matStepperPrevious>Atras</button>
+        <button mat-button (click)="terminarTest($event)" matStepperNext>Terminar Test</button>
+      </div>
+
+  </mat-step >
+
+</mat-horizontal-stepper>
+</main>

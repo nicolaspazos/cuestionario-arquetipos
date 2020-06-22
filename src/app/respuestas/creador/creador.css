@@ -1,0 +1,59 @@
+.parte-4 p{
+  font-size: medium;
+  
+}
+
+.post-container {
+  margin: 3% 15% 3% 0%;  
+  overflow: auto
+}
+.post-thumb {
+  float: right;
+  margin-left: 7vh;
+}
+.post-thumb img {
+  display: block
+}
+.post-content {
+  margin: 7% 0% 0 12%;
+}
+.post-title {
+  font-weight: bold;
+  color: #70BED3;
+  font-size: 100px
+}
+.post-text-1{
+    margin-top: 6vh;
+}
+
+
+.post-thumb-2 img {
+  width: 100%
+}
+
+.post-content-2{
+    text-align: center;
+    margin: 0 22% 0 22%;
+}
+
+
+
+p {
+    
+  font-size: 18px !important;
+  
+}
+
+a{
+  text-decoration: none;
+  color: rgb(100, 100, 248);
+}
+
+.seguir{
+  padding-bottom: 0 !important;
+}
+
+.notaBlog{
+  padding-bottom: 0 !important;
+  color: rgb(62, 62, 247);
+}

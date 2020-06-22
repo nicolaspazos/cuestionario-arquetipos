@@ -1,0 +1,24 @@
+.menu-spacer {
+    flex: 1 1 auto;
+  }
+  
+a{
+    text-decoration: none;
+}
+
+.njambre{
+    color: #EE7516 ;
+    font-size: x-large;
+}
+
+
+  
+.mat-button:hover {
+color: #EE7516;
+}
+
+.mat-toolbar{
+    background-color: white;
+    box-sizing: border-box;
+    border-bottom: solid 3px rgba(0,0,0,0.12);
+}

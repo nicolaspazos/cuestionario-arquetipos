@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+
+@font-face{
+    font-family: 'Montserrat';
+    src: url(./assets/Fonts/Montserrat/Montserrat-Regular.ttf) format("truetype");
+}
+
+html, body { height: 10%; }
+
+body { 
+    margin: 0; 
+    font-family:  "Montserrat"; 
+}
+
+*{
+    font-family:  "Montserrat"; 
+}

@@ -1,0 +1,64 @@
+
+.regente{
+  display: flex;
+}
+
+.regente .columna{
+  float: 1;
+}
+
+.regente-1{
+  width: 50%;
+  padding-top: 4%;
+}
+
+.regente-2{
+  width: 50%;
+  padding-left: 5%;
+}
+
+.regente h1 {
+  color: #91BC75;
+  font-size: 85px;
+  padding-top: 60px;
+  padding-left: 20%;
+  padding-right: 10px;
+  padding-bottom: 20px;
+}
+
+.regente p{
+  padding-bottom: 60px;
+  padding-left: 20%;
+  padding-right: 35px;
+  font-size: large;
+}
+
+.regente p, h2{
+  text-align: justify;
+}
+
+
+.parte-1{
+  width: 50%;
+  padding-top: 9%;
+}
+
+.parte-2{
+  width: 50%;
+  padding-left: 5%;
+  padding-top: 6%;
+}
+  
+a{
+  text-decoration: none;
+  color: rgb(100, 100, 248);
+}
+
+.seguir{
+  padding-bottom: 0 !important;
+}
+
+.notaBlog{
+  padding-bottom: 0 !important;
+  color: rgb(62, 62, 247);
+}

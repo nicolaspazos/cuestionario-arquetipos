@@ -1,0 +1,111 @@
+
+<div class="split left">
+    <div class="centered">
+      <h1>Listo</h1>
+      <p>Para concer tus resultados por favor
+        completá tus datos.</p>
+    </div>
+  </div>
+  
+  <div class="split right">
+    <div class="second-left">
+      <img src="../../assets/Test_Arquetipos_Diseño/Links/Resultados_Liderazgo.png" alt="">
+    
+  </div>
+
+  <div class="second-right">
+    <div class="example-container">
+      <mat-form-field appearance="fill">
+        
+        <mat-label>Nombre</mat-label>
+        <input type='text' [(ngModel)]='nombre'  matInput>
+        
+      </mat-form-field>
+      <br>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Apellido</mat-label>
+        <input matInput>
+      </mat-form-field>
+      <br>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Correo Electrónico</mat-label>
+        <input matInput>
+      </mat-form-field>
+      <br>
+
+      <mat-form-field appearance="fill">
+        <mat-label>¿Donde Trabajás?</mat-label>
+        <mat-select #trabajo >
+          <mat-option value="option">Empresa</mat-option>
+          <mat-option value="option">Emprendimiento</mat-option>
+          <mat-option value="option">Organización social</mat-option>
+          <mat-option value="option">Universidad</mat-option>
+          <mat-option value='noption'>Otro</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <!-- <ng-container *ngIf="trabajo.value != 'option'">
+        <mat-form-field appearance="fill">
+          <mat-label>Donde?</mat-label>
+          <input matInput>
+        </mat-form-field>
+    </ng-container> -->
+      <br>
+
+      <mat-form-field appearance="fill">
+        <mat-label>¿En qué area?</mat-label>
+        <mat-select #area >
+          <mat-option value="option">Fundador</mat-option>
+          <mat-option value="option">Operaciones</mat-option>
+          <mat-option value="option">Comunicación</mat-option>
+          <mat-option value="option">Administración</mat-option>
+          <mat-option value="option">Enseñanza</mat-option>
+          <mat-option value='noption'>Otro</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <!-- <ng-container *ngIf="area.value != 'option'">
+        <mat-form-field appearance="fill">
+          <mat-label>Donde?</mat-label>
+          <input matInput>
+        </mat-form-field>
+    </ng-container> -->
+      <br>
+
+      <mat-form-field appearance="fill">
+        <mat-label>¿Cuál es tu rol?</mat-label>
+        <mat-select #rol >
+          <mat-option value="option">Fundador</mat-option>
+          <mat-option value="option">Director</mat-option>
+          <mat-option value="option">Gerente</mat-option>
+          <mat-option value="option">Coordinador</mat-option>
+          <mat-option value="option">Analista</mat-option>
+          <mat-option value='noption'>Estudiante</mat-option>
+          <mat-option value='noption'>Profesor</mat-option>
+          <mat-option value='noption'>Otro </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <br>
+
+      <mat-form-field appearance="fill">
+        <mat-label>País</mat-label>
+        <input matInput>
+      </mat-form-field>
+      <br>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Ciudad</mat-label>
+        <input matInput>
+      </mat-form-field>
+      <br>
+ 
+
+      <div class="button_cont" (click)="setValue()" align="center"><a class="example_c" target="_blank" rel="nofollow noopener" (click)="verResultados($event)">CONOCER RESULTADOS</a></div>
+
+    </div>
+  </div>
+    
+  </div>
+  
