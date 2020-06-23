@@ -1,4 +1,6 @@
 
+<div id="element-to-export">
+
 <div id="parte-1">
     <div class="columna pajaros-1"> <img src="../../assets/Test_Arquetipos_Diseño/Links/Resultados_a.png" alt=""></div>
     <div class="columna liderazgo-integrado"> <img src="../../assets/Test_Arquetipos_Diseño/Links/Icono_LiderazgoIntegrado.png" alt="" width="65" height="65"> <h1 class="titulo-arriba"> Resultados de </h1> <h1 class="titulo-abajo">  Liderazgo integrado </h1> </div>
@@ -23,6 +25,8 @@
         perfiles dentro de nuestro equipo.</P>
 </div>
 
+
+
 <div class="resultados-grafico">
     <div class="resultado-grafico-1 columna"> <h2> Los resultados de {{nombre}}, de hoy:</h2>
     <p>En el círculo se representan, según tus respuestas, las
@@ -45,6 +49,7 @@
     </div>
 </div>
 </div>
+
 
 <div class="post-intro">
     <div class="post-intro-1 columna"> <img src="../../assets/Test_Arquetipos_Diseño/Links/4Habilidades.png" width="365" height="365" alt="">
@@ -75,17 +80,22 @@
  <h2 class="numero">4</h2>
  <ng-container *ngComponentOutlet="cuartoResultado"></ng-container>
 
+
+ <div class="actions boton-final">
+    <button class="export-button conocer" (click)='onExportClick()'>
+        <h1>Descargar resultados como PDF </h1> 
+    </button>
+</div>
+
+
  <div class="boton-final"> 
      <a href="https://www.njambre.org" target="_blank">
-    <button class="conocer"><h1>CONOCE NUESTRAS HERRAMIENTAS</h1></button>
+    <button class="conocer"><h1>Conoce Nuestras Herramientas</h1></button>
     </a>
  </div>
 
 
-
-
-<div> <button  (click)="downloadAsPDF()">Export To PDF</button></div>
-
+</div>
 
 
 

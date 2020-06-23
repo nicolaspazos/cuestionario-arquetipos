@@ -1,11 +1,13 @@
-import { Component, OnInit, ViewChild, ElementRef,   } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, OnDestroy,   } from '@angular/core';
 import { InteractionService } from "../stepper/interaction.service";
 import { CuidadorComponent } from "./cuidador/cuidador";
 import { RegenteComponent } from "./regente/regente";
 import { MagoComponent } from "./mago/mago";
 import { CreadorComponent } from "./creador/creador";
 import { FormularioComponent } from '../formulario/formulario.component';
-
+import { Router } from '@angular/router';
+import { Subscription } from 'rxjs';
+import * as html2pdf from 'html2pdf.js'
 
 
 
@@ -18,17 +20,31 @@ import { FormularioComponent } from '../formulario/formulario.component';
 
 export class ResultadoComponent implements OnInit {
 
+    onExportClick(){
+        const options =  {
+            filename: "our_file.pdf",
+            image: { type: 'jpeg'},
+            html2canvas: { scale: 2},
+            jsPDF: { unit: 'in', format: 'letter', orientation: 'landscape' }
+        }
 
+        const content: Element = document.getElementById('element-to-export');
 
+        html2pdf().from(content).set(options).save();
+        
+    }    
 
     message: Array<number>;
     messageSombra: Array<number>;
     nombre = localStorage.getItem('myName');
     public demoradarChartData: any;
 
+    subscription: Subscription
+
     constructor (
         private _interactionService: InteractionService,
-        private forComponent: FormularioComponent){}
+        private forComponent: FormularioComponent,
+        private router: Router){}
     
     public resultadoRespuestas:  any =  [];
     public graficoFinal:  any =  [];
@@ -79,11 +95,8 @@ export class ResultadoComponent implements OnInit {
             {data: [this.message[0], this.message[1], this.message[2], this.message[3]], label: 'Habilidades'},
             {data: [ this.messageSombra[0], this.messageSombra[1], this.messageSombra[2], this.messageSombra[3]], label: 'Sombras'}
         ];
-        
-        
-     
+    
     }
-
 
     check (item){
     if(item && item.length  > 0 && this.executed == false){
@@ -115,19 +128,8 @@ export class ResultadoComponent implements OnInit {
           pointHoverBackgroundColor: '#fff',
           pointHoverBorderColor: '#70BED3'
         }];
-
-
+       
         
-        public downloadAsPDF(){
-            window.print() 
-        }
-      
-      
-
-
-
-
-
 }
 
 
