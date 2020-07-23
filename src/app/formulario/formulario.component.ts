@@ -10,7 +10,7 @@ import * as $ from 'jquery'
     styleUrls: ['./formulario.component.css', '../../styles.css'],
 })
 
-export class FormularioComponent implements OnDestroy, OnInit  {
+export class FormularioComponent implements  OnInit  {
     constructor(
         private _interactionService: InteractionService, public router: Router
         ) {}
@@ -25,29 +25,42 @@ export class FormularioComponent implements OnDestroy, OnInit  {
         console.log(this.nombre)
     };
 
- ngOnInit(){
-    var load = 0;
-        
-    document.getElementById('gform').onload = function(){
-        /*Execute on every reload on iFrame*/
-        console.log('heheheheh')
-        load++;
-        if(load > 1) {
-            /*Second reload is a submit*/
-            console.log('lelelelele');
-            window.location.replace("http://localhost:4200/respuestas");
+
+
+
+
+    ngOnInit(){
+        var load = 0;
+            
+        document.getElementById('gform').onload = function(){
+            /*Execute on every reload on iFrame*/
+            console.log('load es igual a ' + load)
+            load++;
+            if(load > 1) {
+                /*Second reload is a submit*/
+                // window.location.replace("");
+                console.log('load es igual a ' + load)
+                localStorage.setItem('load', JSON.stringify(load));
+            }
         }
-    }
- }
-
-
-    ngOnDestroy() {
-        this.nombre = this.nombre
-        console.log(this.nombre)
-        localStorage.setItem('myName', this.nombre);
-        
-      }
     
-  
+    
+        this.kek()
+    
+     }
+        public kek () {
+            var loaded = parseInt(localStorage.getItem("load"));
+            console.log(loaded)
+            if (loaded > 1){
+            this.router.navigate(['/', 'respuestas'])
+            var load = 0 
+            localStorage.setItem('load', JSON.stringify(load));
+    
+            }
+            setTimeout(()=>{    
+                this.kek();
+           }, 3000);
+        
+        }
 
 } 
