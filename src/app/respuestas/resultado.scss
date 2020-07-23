@@ -1,0 +1,371 @@
+@font-face {
+    font-family: "montserrat";
+    src: url("../../assets/Fonts/Montserrat/Montserrat-Regular.ttf");
+    font-style: normal;
+    font-weight: 100;
+    
+    }
+  
+  *{
+    font-family: 'montserrat' !important;
+    font-size: large;
+    
+    line-height: 2rem;
+  }
+
+.componentes-respuestas{
+    font-weight: 200;
+}
+
+.numero{
+    display: flex;
+    float: left;
+    position: relative;
+    top: 17vh;
+    left: 9%;
+    font-size: 140px;
+    color: rgba(128, 128, 128, 0.363);
+}
+
+#parte-1{
+    display: flex;
+    
+    text-align: center;
+}
+
+
+#parte-1 h1{
+    font-size: xx-large;
+    color: #EE7516
+}
+
+#parte-1 img{
+    padding: 10px 0 10px 0;
+}
+
+#parte-1 .columna{
+    float: 1;
+    padding-top: 40px;
+    
+}
+
+.titulo-abajo{
+    font-weight: bold;
+}
+
+.pajaros-1{
+    width: 18%;
+    margin-left: 7%;
+}
+
+.pajaros-2{
+    width: 18%;
+    margin-right: 7%;
+}
+
+.liderazgo-integrado{
+   width: 50%;
+}
+
+.intro-text{
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: justify !important;
+    text-align-last: center!important;
+    padding-bottom: 40px;
+}
+
+
+.para-pensar {
+    
+    text-align: center !important;
+    background-color: #91BC75;
+    color: white;
+    height: 60vh;
+    vertical-align: middle;
+    
+}
+
+.para-pensar img{
+    padding-top: 74px;
+    padding-bottom: 11px;
+}
+
+.para-pensar p{
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: justify;
+    text-align-last: center;
+    padding-bottom: 47px;
+}
+
+.resultados-grafico{
+    display: flex;
+}
+
+.resultados-grafico .columna{
+    float: 1;
+}
+
+.resultado-grafico-1{
+    background-color: #70BED3;
+    width: 49%;
+}
+
+.resultado-grafico-2{
+    width: 50%;
+}
+
+.resultados-grafico h2 {
+    padding-top: 60px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.resultados-grafico p{
+    padding-bottom: 60px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.resultados-grafico p, h2{
+    color: white;
+    text-align: justify;
+}
+
+
+.post-intro{
+    display: flex;
+}
+
+.post-intro .columna{
+    float: left;
+}
+
+.post-intro-1{
+    width: 50%;
+    text-align: center;
+}
+
+.post-intro-2{
+    width: 50%;
+}
+
+.post-intro p{
+    text-align: justify;
+    padding-top: 15%;
+    padding-bottom: 20%;
+    padding-right: 30%;
+    line-height: 150%;
+}
+
+.post-intro img{
+    padding-top: 4%;
+}
+
+.entre-respuestas {
+    display: flex;
+    vertical-align: middle;
+    width: 40%;
+    margin-left: 30%;
+    text-align: justify;
+    text-align-last: center;
+    padding-bottom: 9%;
+    height: 15vh;
+}
+
+.entre-respuestas p {
+    margin-top: 14%;
+}
+.entre-respuestas img{
+    margin-top:  12% ;
+    height: 17vh;
+}
+
+.boton-final{
+    text-align: center;
+    padding-top: 60px;
+    padding-bottom: 50px;
+}
+
+.conocer{
+    
+    background-color: #EE7516;
+    color:white;
+    border-radius: 50px;
+    padding: 10px 10px 1px 10px;
+}
+
+.post-intro-mobile{
+    display: none;
+}
+
+// 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+@media (max-width: 768px) {
+
+*{
+    font-family: 'montserrat' !important;
+    font-size: large;
+    
+    line-height: 1.2rem;
+    }
+    
+p{
+    font-size: 17px !important;
+}
+
+.no-mobile{
+    display: none;
+}
+.liderazgo-integrado{
+    width: 200%;
+}
+
+.para-pensar{
+    height: 80vh;
+}
+
+.para-pensar img{
+    padding: 15px 0 0 0 ;
+}
+
+.para-pensar p{
+    font-size: medium;
+    margin: 0 3% 0 3% ;
+}
+
+.resultados-grafico{
+    display: inline;
+}
+
+.resultado-grafico-1{
+    background-color: #70BED3;
+    width: 100vw;
+}
+
+.resultado-grafico-2{
+    width: 100vw;
+    height: 40vh;
+}
+
+    
+.resultados-grafico h2 {
+    padding-top: 30px;
+    padding-left: 20px;
+    padding-right: 30px;
+}
+
+.resultados-grafico p{
+    padding-bottom: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.resultados-grafico p, h2{
+    color: white;
+    text-align: justify;
+}
+
+.numero{
+    display: none;
+}
+
+
+.post-intro{
+    display: block;
+    width: 100vw !important;
+    font-size: 10px !important;
+    color: red;
+    display: none
+}
+
+.post-intro .columna{
+    
+    width: 100%;
+}
+
+.post-intro-1{
+    text-align: center;
+    display: none !important;
+
+}
+
+.post-intro p{
+    text-align: justify;
+    font-size: 10px;
+    padding-top: 10%;
+    padding-bottom: 15%;
+    padding-right: 4%;
+    padding-left: 4%;
+}
+
+.post-intro img{
+    padding-top: 4%;
+}
+
+.post-intro-mobile{
+    display: block;
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size: small;
+    text-align: justify;
+
+}
+
+.entre-respuestas {
+    display: flex;
+    vertical-align: middle;
+    width: 87%;
+    margin-left: 6%;
+    text-align: justify;
+    text-align-last: center;
+    padding-bottom: 12%;
+    height: 18vh ;
+}
+
+.entre-respuestas p {
+    margin-top: 15%;
+}
+.entre-respuestas img{
+    margin-top:  10% ;
+    height: 19vh;
+}
+
+.boton-final{
+    text-align: center;
+    padding-top: 60px;
+    padding-bottom: 50px;
+    font-size: 2px !important;
+    
+}
+
+.conocer{
+    background-color: #EE7516;
+    color:white;
+    border-radius: 50px;
+    padding: 10px 10px 1px 10px;
+    font-size: 2px !important;
+}
+
+.conocer h1{
+    font-size: 17px !important;
+}
+
+.compartir{
+    width: 100px;
+    height: 100px;
+}
+
+.boton-final{
+    padding: 10px 0 10px 0;
+    font-size: 20px;
+}
+
+.pri{
+    width: 100%;
+}
+
+
+
+}

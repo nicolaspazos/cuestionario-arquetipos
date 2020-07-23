@@ -51,16 +51,15 @@
   
 
 .para-pensar {
-    
   text-align: center !important;
   background-color: rgba(223, 172, 4, 0.815);
   color: white;
-  height: 60vh;
-  
+  height: 50vh;
+
 }
 
 .para-pensar img{
-  padding-top: 110px;
+  padding-top: 60px;
   padding-bottom: 11px;
 }
 
@@ -69,12 +68,12 @@
   margin-right: 10%;
   text-align: justify;
   text-align-last: center;
-  padding-bottom: 47px;
+  padding-bottom: 22px;
   font-size: 20px;
 }
 
 .segundo{
-  font-weight: 590;
+  font-weight: 500;
 }
 
 a{
@@ -89,4 +88,74 @@ a{
 .notaBlog{
   padding-bottom: 0 !important;
   color: rgb(62, 62, 247);
+}
+
+.mobile{
+  display: none;
+}
+
+.mobile-2{
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .no-mobile{
+  display: none;
+}
+.mobile{
+  display: inline;
+  display: flex;
+  float: left;
+  width: 140px;
+}
+
+.mobile-2{
+  display: inline;
+  display: flex;
+  padding: 10px 10px 5px 10px;
+  float: right;
+  width: 130px;
+}
+
+
+
+.columna{
+  width: 100vw;
+}
+
+  h1{
+    font-size: 50px !important;
+    padding: 10px 10px 10px 10px !important;
+    margin-bottom: 0px;
+  }
+
+  p{
+    font-size: 15px !important;
+    padding: 16px 16px 16px 16px !important;
+  }
+
+  .parte-2{
+    margin: 0px 0px 0px 0px;
+    padding: 0 0 0 0;
+    
+  }
+
+  .para-pensar {
+    height: 60vh;
+  
+  }
+
+  .para-pensar h1{
+    font-size: 40px !important;
+    padding: 10px 10px 10px 10px !important;
+    margin-bottom: 0px;
+  }
+
+  .para-pensar img{
+    padding-top: 10px;
+  }
+
+  .para-pensar p{
+    margin-bottom: 0;
+  }
 }

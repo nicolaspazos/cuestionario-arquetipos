@@ -1,20 +1,35 @@
+<!-- jQuery library -->
+<script src="js/jquery.min.js"></script>
 
-<div id="element-to-export">
+<!-- jsPDF library -->
+<script src="js/jsPDF/dist/jspdf.min.js"></script>
 
-<div id="parte-1">
-    <div class="columna pajaros-1"> <img src="../../assets/Test_Arquetipos_Diseño/Links/Resultados_a.png" alt=""></div>
-    <div class="columna liderazgo-integrado"> <img src="../../assets/Test_Arquetipos_Diseño/Links/Icono_LiderazgoIntegrado.png" alt="" width="65" height="65"> <h1 class="titulo-arriba"> Resultados de </h1> <h1 class="titulo-abajo">  Liderazgo integrado </h1> </div>
-    <div class="columna pajaros-2"> <img src="../../assets/Test_Arquetipos_Diseño/Links/Resultados_b.png" alt=""></div> 
-
-    
+<div id="content">
+    <!-- HTML contnet goes here -->
 </div>
-<div class="intro-text">
+
+<div id="elementH"></div>
+
+
+
+
+
+
+
+<body  id="element-to-export">
+   
+<div id="parte-1">
+    <div class="columna pajaros-1 no-mobile"> <img src="../../assets/imagenes/Resultados_a.png" alt=""></div>
+    <div class="columna liderazgo-integrado"> <img src="../../assets/imagenes/Icono_LiderazgoIntegrado.png" alt="" width="65" height="65"> <h1 class="titulo-arriba"> Resultados de </h1> <h1 class="titulo-abajo">  Liderazgo integrado </h1> </div>
+    <div class="columna pajaros-2 no-mobile"> <img src="../../assets/imagenes/Resultados_b.png" alt=""></div> 
+</div>
+<div class="intro-text" >
 <p >Este abordaje es tan solo una pequeña aproximación a una teoría que recomendamos estudiar e investigar en
     profundidad. Desde Njambre entendemos que estos cuatro arquetipos sirven para visualizar e identificar capacidades valiosas para quienes nos enfrentarnos al desafío de emprender.</p>
 </div>
 
-<div class="para-pensar">
-    <img src="../../assets/Test_Arquetipos_Diseño/Links/pausa.png" width="65" height="65" alt="">
+<div class="para-pensar"  >
+    <img src="../../assets/imagenes/pausa.png" width="65" height="65" alt="">
     <h1>PARA PENSAR</h1>
     <P>El camino del autoconocimiento es sinuoso y (¡por suerte!) las personas estamos en constante cambio. Por
         eso es fundamental destacar que los resultados que obtengas hoy, pueden ser distintos mañana, o en unos
@@ -25,10 +40,8 @@
         perfiles dentro de nuestro equipo.</P>
 </div>
 
-
-
 <div class="resultados-grafico">
-    <div class="resultado-grafico-1 columna"> <h2> Los resultados de {{nombre}}, de hoy:</h2>
+    <div class="resultado-grafico-1 columna"> <h2> Tus resultados de hoy:</h2>
     <p>En el círculo se representan, según tus respuestas, las
         habilidades más y menos desarrolladas de los cuatro
         arquetipos emprendedores, con sus luces y sombras. Todos
@@ -50,29 +63,32 @@
 </div>
 </div>
 
-
 <div class="post-intro">
-    <div class="post-intro-1 columna"> <img src="../../assets/Test_Arquetipos_Diseño/Links/4Habilidades.png" width="365" height="365" alt="">
+    <div class="post-intro-1 columna"> <img src="../../assets/imagenes/4Habilidades.png" width="365" height="365" alt="">
     </div>
     <div class="post-intro-2 columna"> 
         <p>Te daremos el orden de los arquetipos según tus resultados, te recomendamos que leas los cuatro (y   no solo el que te dio más alto o más bajo) porque creemos que
             todos somos un poco de todo, y hay momentos en que
-            desarrollamos o mostramos más una característica, y momentos en el que nos viene bien desplegar otras. Los cuatro arquetipos tienen sus luces y sus sombras.</p> </div>
+            desarrollamos o mostramos más una característica, y momentos en el que nos viene bien desplegar otras. Los cuatro arquetipos tienen sus luces y sus sombras.</p> 
+        </div>
 </div>
 
-
-
- <div  *ngIf="check(resultadoRespuestas)"></div>
-
+<div class="post-intro-mobile">
+<p>Te daremos el orden de los arquetipos según tus resultados, te recomendamos que leas los cuatro (y   no solo el que te dio más alto o más bajo) porque creemos que
+    todos somos un poco de todo, y hay momentos en que
+    desarrollamos o mostramos más una característica, y momentos en el que nos viene bien desplegar otras. Los cuatro arquetipos tienen sus luces y sus sombras.</p> 
+</div>
+<div class="componentes-respuestas">
 
  <h2 class="numero">1</h2>
-<ng-container  *ngComponentOutlet="primerResultado"></ng-container>
+<ng-container class="pri"  *ngComponentOutlet="primerResultado"></ng-container>
 <h2 class="numero">2</h2>
  <ng-container *ngComponentOutlet="segundoResultado"></ng-container>
 
- <div class="entre-respuestas"> <img src="../../assets/Test_Arquetipos_Diseño/Links/brack-1.png" alt=""> 
+ <div class="entre-respuestas"> 
+     <img src="../../assets/imagenes/brack-1.png" alt=""> 
     <p >Todos tenemos aspectos de los cuatro arquetipos, hay momentos en que desarrollamos o mostramos más una característica, y momentos en el que nos viene bien desplegar otras.</p>
-    <img src="../../assets/Test_Arquetipos_Diseño/Links/brack-2.png" alt="">
+    <img src="../../assets/imagenes/brack-2.png" alt="">
 </div>
 
 <h2 class="numero">3</h2>
@@ -80,10 +96,11 @@
  <h2 class="numero">4</h2>
  <ng-container *ngComponentOutlet="cuartoResultado"></ng-container>
 
+</div>
 
  <div class="actions boton-final">
     <button class="export-button conocer" (click)='onExportClick()'>
-        <h1>Descargar resultados como PDF </h1> 
+        <h1>Descargar resultados como PDF </h1>
     </button>
 </div>
 
@@ -94,10 +111,7 @@
     </a>
  </div>
 
-
-</div>
-
+</body>
 
 
 
- <app-footer></app-footer>

@@ -1,4 +1,4 @@
-import { Component, NgModule, Injectable, OnInit, EventEmitter,  Output, ɵCodegenComponentFactoryResolver } from '@angular/core'
+import { Component, NgModule, Injectable, OnInit, EventEmitter,  Output, ɵCodegenComponentFactoryResolver, OnDestroy } from '@angular/core'
 import { Routes, RouterModule, Router } from '@angular/router';
 import { BehaviorSubject } from 'rxjs';
 import { InteractionService } from './interaction.service'
@@ -8,19 +8,18 @@ import { MagoComponent } from "../respuestas/mago/mago";
 import { CreadorComponent } from "../respuestas/creador/creador";
 
 import { MAT_STEPPER_GLOBAL_OPTIONS } from '@angular/cdk/stepper';
+import { NgForm } from '@angular/forms';
 
 
 @Component({
     selector: 'app-stepper',
     templateUrl: './stepper.component.html',
     styleUrls: ['./stepper.component.scss', '../../styles.css'],
-    providers: [{
-        provide: MAT_STEPPER_GLOBAL_OPTIONS, useValue: { displayDefaultIndicatorType: false }
-      }]
-})
+    providers: [{provide: MAT_STEPPER_GLOBAL_OPTIONS, useValue: { displayDefaultIndicatorType: false }}]})
 
 @Injectable()
-export class StepperComponent implements OnInit {
+export class StepperComponent implements OnInit, OnDestroy {
+
     
     regente: any = 0;
     mago: any = 0;
@@ -35,6 +34,7 @@ export class StepperComponent implements OnInit {
     message: Array<number>;
     resultadoGrafico: any;
     resultadoSombra: any;
+    resultadoArquetipos: any;
 
     constructor(private _interactionService: InteractionService, private router: Router) {}
   
@@ -139,22 +139,22 @@ export class StepperComponent implements OnInit {
 
         var indexMago = this.resultadoArquetipos.indexOf(this.mago);
         if (~indexMago) {
-            this.resultadoArquetipos[indexMago] = MagoComponent;
+            this.resultadoArquetipos[indexMago] = 'MagoComponent';
         }
 
         var indexRegente = this.resultadoArquetipos.indexOf(this.regente);
         if (~indexRegente) {
-            this.resultadoArquetipos[indexRegente] = RegenteComponent;
+            this.resultadoArquetipos[indexRegente] = 'RegenteComponent';
         }
 
         var indexCuidador = this.resultadoArquetipos.indexOf(this.cuidador);
         if (~indexCuidador) {
-            this.resultadoArquetipos[indexCuidador] = CuidadorComponent;
+            this.resultadoArquetipos[indexCuidador] = 'CuidadorComponent';
         }
 
         var indexCreador = this.resultadoArquetipos.indexOf(this.creador);
         if (~indexCreador) {
-            this.resultadoArquetipos[indexCreador] = CreadorComponent;
+            this.resultadoArquetipos[indexCreador] = 'CreadorComponent';
         }
 
         this.router.navigate(['/', 'formulario'])
@@ -178,8 +178,21 @@ export class StepperComponent implements OnInit {
         this._interactionService.currentMessage.subscribe(message => this.message = message)
     }
 
+    ngOnDestroy() {
+        localStorage.setItem('regente', this.regente);
+        localStorage.setItem('creador', this.creador);
+        localStorage.setItem('cuidador', this.cuidador);
+        localStorage.setItem('mago', this.mago);
+        localStorage.setItem('resultadoGrafico', JSON.stringify(this.resultadoGrafico));
+        localStorage.setItem('resultadoSombra', JSON.stringify(this.resultadoSombra));
+        localStorage.setItem('resultadoArquetipos0', JSON.stringify(this.resultadoArquetipos[0]));
+        localStorage.setItem('resultadoArquetipos1', JSON.stringify(this.resultadoArquetipos[1]));
+        localStorage.setItem('resultadoArquetipos2', JSON.stringify(this.resultadoArquetipos[2]));
+        localStorage.setItem('resultadoArquetipos3', JSON.stringify(this.resultadoArquetipos[3]));
+      }
+
     
-    @Output() resultadoArquetipos = []
+    // @Output() resultadoArquetipos = []
 }
 
 

@@ -8,31 +8,42 @@ import { FormularioComponent } from '../formulario/formulario.component';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import * as html2pdf from 'html2pdf.js'
+import * as jsPDF from 'jspdf'
 
 
 
 @Component({
     selector: 'app-resultado',
     templateUrl: './resultado.html',
-    styleUrls: ['./resultado.css', '../../styles.css']
+    styleUrls: ['./resultado.scss', '../../styles.css']
 })
 
 
 export class ResultadoComponent implements OnInit {
 
+    // onExportClick(){
+    //     const options =  {
+    //         filename: "resultados.pdf",
+    //         image: { type: 'jpeg'},
+    //         html2canvas: { scale: 2},
+    //         jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+    //     }
+    //     const content = document.getElementById('element-to-export');
+    //     html2pdf().from(content).set(options).save(); 
+    // }   
+    
     onExportClick(){
-        const options =  {
-            filename: "our_file.pdf",
-            image: { type: 'jpeg'},
-            html2canvas: { scale: 2},
-            jsPDF: { unit: 'in', format: 'letter', orientation: 'landscape' }
-        }
-
-        const content: Element = document.getElementById('element-to-export');
-
-        html2pdf().from(content).set(options).save();
+        var element = document.getElementById('element-to-export');
+        var opt = {
+        margin:       0,
+        filename:     'myfile.pdf',
+        image:        { type: 'jpeg', quality: 0.98 },
+        html2canvas:  { scale: 2 },
+        jsPDF:        { unit: 'in', format: 'a4', orientation: 'landscape' }
+        };
         
-    }    
+        html2pdf().from(element).set(opt).save();
+    }
 
     message: Array<number>;
     messageSombra: Array<number>;
@@ -57,44 +68,115 @@ export class ResultadoComponent implements OnInit {
     public tercerResultado = '';
     public cuartoResultado = '';   
 
-    public ngOnInit(): void {
+    resultadoArquetipos0: any = localStorage.getItem("resultadoArquetipos0");
+    resultadoArquetipos1: any = localStorage.getItem("resultadoArquetipos1");
+    resultadoArquetipos2: any = localStorage.getItem("resultadoArquetipos2");
+    resultadoArquetipos3: any = localStorage.getItem("resultadoArquetipos3");
 
-        this._interactionService.invokeEvent.subscribe((value) => {
-            this.resultadoRespuestas = value;
-       });
-     
-
-       this.renderFinal = function render() {
-        if(this.resultadoRespuestas == false){
-            window.setTimeout(render, 4100);
-        } else  {
-
-            
-            this.primerResultado = this.resultadoRespuestas[0];
-        console.log(this.resultadoRespuestas[0])
-         
-   
-           this.segundoResultado = this.resultadoRespuestas[1];
-         console.log(this.resultadoRespuestas[1])
-       
-   
-         this.tercerResultado = this.resultadoRespuestas[2];
-         console.log(this.resultadoRespuestas[2])
-   
-         this.cuartoResultado = this.resultadoRespuestas[3];
-       console.log(this.resultadoRespuestas[3])
+    reemplazar0(){
+        if(this.resultadoArquetipos0.includes("Regente") ){
+        this.resultadoArquetipos0 = RegenteComponent
         }
-     }
+        else if(this.resultadoArquetipos0.includes("Mago")){
+            this.resultadoArquetipos0 = MagoComponent
+        }
+        else if(this.resultadoArquetipos0.includes("Cuidador")){
+            this.resultadoArquetipos0 = CuidadorComponent
+        }
+        else {
+            this.resultadoArquetipos0 = CreadorComponent
+        };
+    }
+
+    reemplazar1(){
+        if(this.resultadoArquetipos1.includes("Regente") ){
+        this.resultadoArquetipos1 = RegenteComponent
+        }
+        else if(this.resultadoArquetipos1.includes("Mago")){
+            this.resultadoArquetipos1 = MagoComponent
+        }
+        else if(this.resultadoArquetipos1.includes("Cuidador")){
+            this.resultadoArquetipos1 = CuidadorComponent
+        }
+        else {
+            this.resultadoArquetipos1 = CreadorComponent
+        };
+    }
+
+    reemplazar2(){
+        if(this.resultadoArquetipos2.includes("Regente") ){
+        this.resultadoArquetipos2 = RegenteComponent
+        }
+        else if(this.resultadoArquetipos2.includes("Mago")){
+            this.resultadoArquetipos2 = MagoComponent
+        }
+        else if(this.resultadoArquetipos2.includes("Cuidador")){
+            this.resultadoArquetipos2 = CuidadorComponent
+        }
+        else {
+            this.resultadoArquetipos2 = CreadorComponent
+        };
+    }
+
+    reemplazar3(){
+        if(this.resultadoArquetipos3.includes("Regente") ){
+        this.resultadoArquetipos3 = RegenteComponent
+        }
+        else if(this.resultadoArquetipos3.includes("Mago")){
+            this.resultadoArquetipos3 = MagoComponent
+        }
+        else if(this.resultadoArquetipos3.includes("Cuidador")){
+            this.resultadoArquetipos3 = CuidadorComponent
+        }
+        else {
+            this.resultadoArquetipos3 = CreadorComponent
+        };
+    }
+
+    public ngOnInit() {
+
+        var doc = new jsPDF();
+        var elementHTML = $('#contnet').html();
+        var specialElementHandlers = {
+            '#elementH': function (element, renderer) {
+                return true;
+            }
+        };
+        doc.fromHTML(elementHTML, 15, 15, {
+            'width': 170,
+            'elementHandlers': specialElementHandlers
+        });
+
+        // Save the PDF
+        doc.save('sample-document.pdf');
+
+
+
+
+        var guardado = localStorage.getItem('resultadoGrafico');
+        var grafico = JSON.parse(guardado);
+
+        var sombraLocal = localStorage.getItem('resultadoSombra');
+        var sombra = JSON.parse(sombraLocal);
+        
+        this.reemplazar0()
+        this.reemplazar1()
+        this.reemplazar2()
+        this.reemplazar3()
+        
+        this.primerResultado = this.resultadoArquetipos0
+        this.segundoResultado = this.resultadoArquetipos1
+        this.tercerResultado = this.resultadoArquetipos2
+        this.cuartoResultado = this.resultadoArquetipos3
 
      this._interactionService.currentMessage.subscribe(message => this.message = message)
      this._interactionService.currentSombraMessage.subscribe(messageSombra => this.messageSombra = messageSombra)
 
-        
-        
-        this.demoradarChartData  = [
-            {data: [this.message[0], this.message[1], this.message[2], this.message[3]], label: 'Habilidades'},
-            {data: [ this.messageSombra[0], this.messageSombra[1], this.messageSombra[2], this.messageSombra[3]], label: 'Sombras'}
-        ];
+
+    this.demoradarChartData  = [
+        {data: [ grafico[0], grafico[1], grafico[2], grafico[3]], label: 'Habilidades'},
+        {data: [ sombra[0], sombra[1], sombra[2], sombra[3]], label: 'Sombras'}
+    ];
     
     }
 
